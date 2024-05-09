@@ -4,8 +4,6 @@
     padding: 12px;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
     cursor: pointer;
 
     &--primary {
@@ -15,11 +13,9 @@
 
     @media (max-width: 640px) {
         display: block;
-        width: 100%;
     }
 
     @media (max-width: 1024px) {
         display: flex;
-        align-items: center;
     }
 }
