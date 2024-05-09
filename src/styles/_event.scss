@@ -1,0 +1,67 @@
+@use 'variables';
+
+.event {
+    padding: 80px 0;
+    overflow: hidden;
+
+    &--about-me {
+        background-image: linear-gradient(variables.$blue, variables.$green);
+    }
+
+    &--family {
+        background-image: linear-gradient(variables.$green, variables.$pink);
+    }
+
+    &--activities {
+        background-image: linear-gradient(variables.$pink, variables.$purple2);
+    }
+
+    &--guest {
+        background-image: linear-gradient(variables.$purple2, variables.$purple1);
+    }
+
+    &__image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+    
+    &__details {
+    
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+    
+    &__image {
+        width: 100%;
+        max-height: 260px;
+        object-fit: cover;
+        border: solid 2px variables.$textColor;
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__details {
+            margin-bottom: 16px;
+        }
+
+        &__image {
+            width: 100%;
+        }
+    }
+}
